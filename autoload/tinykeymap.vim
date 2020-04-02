@@ -411,7 +411,7 @@ function! tinykeymap#Call(name) "{{{3
                     call feedkeys(autokey)
                     let time = 0
                 endif
-            elseif type(key) == 0 && key == 27
+            elseif type(key) == 0 && key == char2nr(g:mapleader)
                 " TLogVAR "<esc>"
                 break
             elseif type(key) == 1 && key ==# "\<F1>"
