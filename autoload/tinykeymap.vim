@@ -414,8 +414,7 @@ function! tinykeymap#Call(name) "{{{3
             elseif type(key) == 0 && key == char2nr(g:mapleader)
                 " TLogVAR "<esc>"
                 break
-            elseif type(key) == 1 && key ==# "\<F1>"
-                " TLogVAR "<f1>"
+            elseif type(key) == 0 && key ==# char2nr("?")
                 call s:Help(dict)
             elseif type(key) == 1 && key ==# "\<Del>"
                 " TLogVAR "<del>"
